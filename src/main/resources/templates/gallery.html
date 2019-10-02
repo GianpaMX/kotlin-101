@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+
+    <title>Gallery</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <style>
+        div.gallery {
+          margin: 5px;
+          border: 1px solid #ccc;
+          float: left;
+          width: 180px;
+        }
+
+        div.gallery img {
+          width: 100%;
+          height: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+<div th:each="image : ${images}" class="gallery">
+    <img th:src="${image}"/>
+</div>
+</body>
+</html>
